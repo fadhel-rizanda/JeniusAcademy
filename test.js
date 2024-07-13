@@ -15,3 +15,5 @@ console.log("Multiplying => " + multiply(37, 2));
 const dividing = (a,b)=>a/b;
 console.log("dividing => " + dividing(148, 2));
 
+const pullRequest = "Pull Request";
+console.log(pullRequest);
