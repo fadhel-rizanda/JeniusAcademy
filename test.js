@@ -12,8 +12,6 @@ console.log("Substracting => " + substract(148, 74))
 const multiply = (a, b)=>a*b;
 console.log("Multiplying => " + multiply(37, 2));
 
-const divide = (a,b)=>a/b;
-console.log("dividing => " + divide(148, 2));
+const dividing = (a,b)=>a/b;
+console.log("dividing => " + dividing(148, 2));
 
-const branchStatus = "Please delete";
-console.log(branchStatus);
