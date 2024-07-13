@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registration page</title>
+
+    <link rel="stylesheet" href="../CSS/registerStyle.css" />
+    <link rel="icon" href="../ASSET/img/img-logo/icon_title.png" type="image/png">
+  </head>
+  <body>
+  <!-- navbar start -->
+  <nav>
+      <div class="navbar">
+      <div class="navbar_logo">
+        <a href="../HTML/home.html">JeniusAcademy</a>
+      </div>
+      <div class="navbar_content">
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/subscription.html">Subsciption</a>
+        <a href="../HTML/testimony.html">Testimony</a>
+        <a href="../HTML/learn.html">Learn</a>
+        <a href="#" class="register_navbar_content">Register</a>
+      </div>
+      <div class="navbar_extra">
+        <a href="#" class="register_navbar_extra">Register</a>
+        <a href="" id="hamburger_icon"></a>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+    <!-- header start -->
+    <header>
+      <!-- content star -->
+    <main>
+        <div class="registration_page">
+          <div class="registration_container">
+            <div class="registration_title">
+              "Register your <span>Account"</span>
+            </div>
+            <div class="registration_name_container">
+              
+              <div class="input_error_container">
+                <div class="registration_firstname_container">
+                  <div class="firstname_logo"></div>
+                    <input 
+                      class="registration_firstname_input" 
+                      type="text" 
+                      id="firstname" 
+                      placeholder="firstname"
+                    />
+                </div>
+                <div class="error_message" id="firstname_error"></div>
+              </div>                        
+              <div class="input_error_container">
+              <div class="registration_surname_container">
+                <div class="lastname_logo"></div>
+                  <input
+                    class="registration_surname_input"
+                    type="text"
+                    id="surname"
+                    placeholder="surname"            
+                  />
+                </div>
+                <div class="error_message" id="surname_error"></div>
+              </div>
+            </div>
+            
+            
+            <div class="input_error_container">                                  
+              <div class="registration_email_container">
+                <div class="email_logo"></div>
+                  <input
+                    class="registration_email_input"
+                    type="text"
+                    id="email"
+                    placeholder="email address"            
+                  />
+                </div>
+                <div class="error_message" id="email_error"></div>
+            </div>
+            
+            <div class="input_error_container">
+              <div class="registration_phone_container">
+                <div class="phone_logo"></div>
+                  <input
+                    class="registration_phone_input"
+                    type="number"
+                    id="phone"
+                    placeholder="phone number"          
+                  />
+              </div>
+              <div class="error_message" id="phone_error"></div>
+            </div>
+          
+            <div class="input_error_container">
+              <div class="registration_password_container">
+                <div class="password_logo"></div>
+                  <input
+                    class="registration_password_input"
+                    type="password"
+                    id="password"
+                    placeholder="password"          
+                  />
+                  <div class="password_visibility_container" id="password_visibility"></div>
+              </div>
+              <div class="error_message" id="password_error"></div>
+            </div>
+            
+            <div class="input_error_container">
+              <div class="registration_confirm_password_container">
+                <div class="confirm_logo"></div>
+                    <input
+                    class="registration_confirm_password_input"
+                    type="password"
+                    id="confimation_password"
+                    placeholder="confirm password"          
+                  />
+                <div class="password_visibility_container" id="confirm_password_visibility"></div>
+                </div>        
+              <div class="error_message" id="confirmation_password_error"></div>
+            </div>
+
+            <div class="login_container">already have an account? <a href="" class="login_button">login here</a></div>          
+          
+            <div class="registration_button" onclick="validateInput()">Register Account</div>
+
+
+            <div class="or">━━━━━━━━━━ or ━━━━━━━━━━</div>
+
+            <div class="continue_container">          
+              <div class="continue_google" id="Google" onclick="passRegister(id)"><div class="logo google_logo"></div> Continue with Google</div>
+              <div class="continue_email" id="Gmail" onclick="passRegister(id)"><div class="logo gmail_logo"></div> Continue with Gmail</div>
+            </div>
+          <div class="explore_container">
+            <div class="explore_button" onclick="startExplore()">Start Explore</div>
+          </div>
+          </div>
+        </div>
+        </main>
+      <!-- content end -->
+    </header>
+    <!-- header end -->
+
+    <!-- footer start -->
+    <footer>
+      <div class="footer_container">
+        <div class="footer_logo_container">
+          <div class="footer_logo">JeniusAcademy</div>
+          <div class="footer_tagline">Fun Learning, Bright Future!</div>
+        </div>
+  
+        <div class="navbar_list_container">
+          <a href="../HTML/home.html">Home</a>
+          <a href="../HTML/subscription.html">Subsciption</a>
+          <a href="../HTML/testimony.html">Testimony</a>
+          <a href="../HTML/learn.html">Learn</a>
+          <a href="#">Register</a>
+        </div>
+  
+        <div class="contact_list_container">
+          <a href="" class="contacts"><div class="logo email_footer_logo"></div> supportJeniusacademy@gmail.com</a>
+          <a href="" class="contacts"><div class="logo phone_footer_logo"></div>0804 169 69 69</a>
+          <a href="" class="contacts"><div class="logo facebook_footer_logo"></div> JeniusAcademy</a>
+          <a href="" class="contacts"><div class="logo twitter_footer_logo"></div> @jeniusAcademy</a>
+          <a href="" class="contacts"><div class="logo instagram_footer_logo"></div> @JeniusAcademy</a>
+        </div>
+        
+        <div class="footer_location">Binus Bekasi Campus, Lingkar Boulevard Street Block WA No.1 Summarecon Bekasi, RT.006/RW.003, Marga Mulya, North Bekasi District, Bekasi City, West Java 17142</div>
+        <div class="created_by">Created by <a href="">fadhel.rizanda@binus.ac.id</a>. | &copy; 2024.</div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="../JS/registerScript.js"></script>
+  </body>
+</html>

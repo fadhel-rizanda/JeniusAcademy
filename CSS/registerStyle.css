@@ -1,0 +1,635 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../ASSET/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+  --color-white-1: rgb(255, 255, 255);
+  --color-white-2: #eaeaea;
+  --color-white-3: #cacaca;
+
+  --color-chocolate-1: #be8f6d;
+  --color-chocolate-2: #844f29;
+  --color-chocolate-3: #57341b;
+  --color-chocolate-4: #39100f;
+
+  --color-blue-1: #404dc0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Inter";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 7%;
+  align-items: center;
+  background-color: var(--color-chocolate-1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-size: large;
+}
+.navbar a:hover {
+  color: white;
+}
+
+.navbar .navbar_logo a {
+  color: black;
+}
+
+.navbar .navbar_content a {
+  margin: 0 0.5rem;
+  color: black;
+  position: relative;
+}
+
+.navbar .navbar_content a:hover {
+  color: white;
+}
+
+.navbar_extra a {
+  color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar_extra a:hover {
+  color: white;
+}
+
+#hamburger_icon {
+  background-image: url("../ASSET/img/img-logo/hamburger.png");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.navbar_content .register_navbar_content {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  #hamburger_icon {
+    display: inline-block;
+  }
+  #hamburger_icon:hover {
+    background-image: url("../ASSET/img/img-logo/hamburger_active.png");
+  }
+
+  .navbar_extra .register_navbar_extra {
+    display: none;
+  }
+
+  .navbar_content .register_navbar_content {
+    display: inline-block;
+  }
+
+  .navbar_content {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: min-content;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar_logo {
+    font-size: 35px;
+  }
+
+  .navbar_content.active {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    right: 0;
+    box-shadow: 1px 1px 10px rgb(191, 190, 190);
+  }
+
+  .navbar_content a {
+    display: inline-block;
+    justify-content: first baseline;
+    margin-top: 24px;
+    padding: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 45px;
+  }
+
+  .navbar_content a:hover {
+    color: var(--color-white-3) !important;
+  }
+}
+/* navbar end */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.registration_page {
+  background-image: url("../ASSET/img/img-background/register.jpg");
+  display: flex;
+  justify-content: center;
+  padding: 120px 10px;
+  padding-bottom: 90px;
+  background-size: cover;
+  background-position: center;
+}
+.registration_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  text-align: center;
+  padding: 50px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  height: min-content;
+  width: min-content;
+  box-shadow: 1px 1px 30px black;
+}
+.registration_title {
+  text-align: center;
+  color: var(--color-white-1);
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.registration_title span {
+  color: var(--color-chocolate-1);
+  font-weight: bolder;
+}
+.firstname_logo {
+  width: 20px;
+  height: 20px;
+  background-image: url("../ASSET/img/img-logo/firstname.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.lastname_logo {
+  width: 20px;
+  height: 20px;
+  background-image: url("../ASSET/img/img-logo/lastname.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.email_logo {
+  width: 24px;
+  height: 24px;
+  background-image: url("../ASSET/img/img-logo/email.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.phone_logo {
+  width: 24px;
+  height: 24px;
+  background-image: url("../ASSET/img/img-logo/phone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.password_logo {
+  width: 24px;
+  height: 24px;
+  background-image: url("../ASSET/img/img-logo/password.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.confirm_logo {
+  width: 24px;
+  height: 24px;
+  background-image: url("../ASSET/img/img-logo/confirmPassword.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.google_logo {
+  width: 24px;
+  height: 24px;
+  background-image: url("../ASSET/img/img-logo/google.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.gmail_logo {
+  width: 24px;
+  height: 24px;
+  background-image: url("../ASSET/img/img-logo/gmail.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.password_visibility_container {
+  width: 24px;
+  height: 24px;
+  background-image: url(../ASSET/img/img-logo/visibility_off.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.password_visibility_container.active {
+  background-image: url(../ASSET/img/img-logo/visisbility_on.png);
+}
+.registration_name_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.registration_firstname_container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 245px;
+  gap: 10px;
+}
+.registration_firstname_input {
+  min-width: 100px;
+}
+.registration_surname_container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 245px;
+  gap: 10px;
+}
+.registration_surname_input {
+  min-width: 100px;
+}
+.registration_email_container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 500px;
+  gap: 10px;
+}
+.registration_email_input {
+  width: 100%;
+}
+.registration_phone_container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 500px;
+  gap: 10px;
+}
+.registration_phone_input {
+  width: 100%;
+}
+.registration_password_container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 500px;
+  gap: 10px;
+}
+.registration_password_input {
+  width: 100%;
+}
+.registration_confirm_password_container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 500px;
+  gap: 10px;
+}
+.registration_confirm_password_input {
+  width: 100%;
+}
+.login_container {
+  color: white;
+  display: flex;
+  gap: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.login_container a {
+  color: var(--color-chocolate-1);
+  font-weight: bolder;
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 2px;
+}
+.login_container a:hover {
+  color: var(--color-chocolate-2);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+.registration_button {
+  align-items: center;
+  place-content: center;
+  background-color: var(--color-chocolate-1);
+  padding: 10px 50px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: large;
+}
+.registration_button:hover {
+  box-shadow: 1px 1px 30px rgba(190, 143, 109, 0.866);
+  cursor: pointer;
+}
+.registration_button:active {
+  background-color: var(--color-chocolate-4);
+  color: wheat;
+}
+.explore_container {
+  display: flex;
+  justify-content: right;
+  width: 500px;
+}
+.explore_button {
+  display: none;
+}
+.explore_button.active {
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 0;
+  display: flex;
+  cursor: pointer;
+  color: var(--color-chocolate-1);
+  font-weight: bolder;
+}
+.explore_button.active:hover {
+  background-color: var(--color-chocolate-4);
+  cursor: pointer;
+}
+.explore_button.active:active {
+  background-color: var(--color-chocolate-4);
+  color: wheat;
+}
+.explore_button {
+  display: none;
+}
+.registration_container input {
+  margin-right: 0;
+  width: 100%;
+}
+.registration_phone_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.registration_firstname_input::placeholder,
+.registration_surname_input::placeholder,
+.registration_email_input::placeholder,
+.registration_phone_input::placeholder,
+.registration_password_input::placeholder,
+.registration_confirm_password_input::placeholder {
+  color: black; 
+}
+.registration_container:focus {
+  border: 10px solid #404dc0;
+}
+.registration_container input:focus {
+  border-radius: 0;
+  border-bottom: 1px solid gray;
+}
+.input_error_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error_message {
+  width: calc(100% - 20px);
+  text-align: left;
+  padding: 5px;  
+  font-size: small;
+  font-weight: 500;
+  color: red;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.alert {
+  background-image: url(../ASSET/img/img-logo/alert.png);
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.or{
+  margin-top: 10px;
+  color: var(--color-chocolate-1);
+}
+.continue_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+  padding-bottom: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.continue_google {
+  width: 235px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+  background-color: var(--color-white-2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.continue_email {
+  width: 235px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+  background-color: var(--color-white-2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.continue_google:hover {
+  box-shadow: 1px 1px 10px rgb(0, 140, 255);
+}
+.continue_email:hover {
+  box-shadow: 1px 1px 10px rgb(255, 0, 0);
+}
+.continue_google:active {
+  background-color: var(--color-white-3);
+}
+.continue_email:active {
+  background-color: var(--color-white-3);
+}
+
+@media (max-width: 990px) {
+  .registration_name_container {
+    flex-direction: column;
+  }
+  .registration_firstname_container {
+    width: 390px;
+  }
+  .registration_surname_container {
+    width: 390px;
+  }
+  .registration_email_container {
+    width: 390px;
+  }
+  .registration_phone_container {
+    width: 390px;
+  }
+  .registration_password_container {
+    width: 390px;
+  }
+  .registration_confirm_password_container {
+    width: 390px;
+  }
+  .registration_container {
+    padding: 50px 0;
+    width: 470px;
+  }
+  .explore_button.active {
+    margin: 50px;
+    margin-top: auto;
+  }
+}
+
+/* footer start */
+.footer_container {
+  background-color: var(--color-chocolate-4);
+  color: white;
+  padding: 60px 30px;
+  padding-top: 60px;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+.footer_container a {
+  color: white;
+}
+.footer_container a:hover {
+  color: var(--color-white-3);
+}
+.navbar_list_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact_list_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer_logo {
+  color: var(--color-chocolate-1);
+  font-size: 40px;
+  font-weight: bolder;
+}
+.footer_tagline {
+  font-size: 25px;
+  font-weight: 200;
+}
+.footer_location {
+  width: 300px;
+  line-height: 1.5;
+}
+.logo {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.email_footer_logo {
+  background-image: url("../ASSET/img/img-logo/email_active.png");
+}
+.phone_footer_logo {
+  background-image: url("../ASSET/img/img-logo/phone_active.png");
+}
+.facebook_footer_logo {
+  background-image: url("../ASSET/img/img-logo/facebook_active.png");
+}
+.twitter_footer_logo {
+  background-image: url("../ASSET/img/img-logo/twitter_active.png");
+}
+.instagram_footer_logo {
+  background-image: url("../ASSET/img/img-logo/instagram_active.png");
+}
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: medium;
+}
+.created_by a {
+  color: var(--color-chocolate-1);
+  font-weight: bolder;
+}
+
+@media (max-width: 990px) {
+  .footer_container {
+    gap: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .navbar_list_container {
+    flex-direction: row;
+  }
+  .contact_list_container {
+    align-items: center;
+  }
+  .footer_location {
+    text-align: center;
+  }
+}
+/* footer end */

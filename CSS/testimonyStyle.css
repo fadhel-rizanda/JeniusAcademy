@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../ASSET/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+  --color-white-1: rgb(255, 255, 255);
+  --color-white-2: #eaeaea;
+  --color-white-3: #cacaca;
+
+  --color-chocolate-1: #be8f6d;
+  --color-chocolate-2: #844f29;
+  --color-chocolate-3: #57341b;
+  --color-chocolate-4: #39100f;
+
+  --color-blue-1: #404dc0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Inter";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 7%;
+  align-items: center;
+  background-color: var(--color-chocolate-1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-size: large;
+}
+.navbar a:hover {
+  color: white;
+}
+
+.navbar .navbar_logo a {
+  color: black;
+}
+
+.navbar .navbar_content a {
+  margin: 0 0.5rem;
+  color: black;
+  position: relative;
+}
+
+.navbar .navbar_content a:hover {
+  color: white;
+}
+
+.navbar_extra a {
+  color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar_extra a:hover {
+  color: white;
+}
+
+#hamburger_icon {
+  background-image: url("../ASSET/img/img-logo/hamburger.png");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.navbar_content .register_navbar_content {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  #hamburger_icon {    
+    display: inline-block;
+  }
+  #hamburger_icon:hover{
+    background-image: url("../ASSET/img/img-logo/hamburger_active.png");
+  }
+
+  .navbar_extra .register_navbar_extra {
+    display: none;
+  }
+
+  .navbar_content .register_navbar_content {
+    display: inline-block;
+  }
+
+  .navbar_content {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: min-content;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar_logo{
+    font-size: 35px;
+  }
+
+  .navbar_content.active {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    right: 0;
+    box-shadow: 1px 1px 10px rgb(191, 190, 190);
+  }
+
+  .navbar_content a {
+    display: inline-block;
+    justify-content: first baseline;
+    margin-top: 24px;
+    padding: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 45px;
+  }
+
+  .navbar_content a:hover {
+    color: var(--color-white-3) !important;
+  }
+}
+/* navbar end */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.testimony_page_1 {
+  background-image: url("../ASSET/img/img-background/testimony.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 250px 5%;
+  justify-content: left;
+}
+.testimony_quote_container {
+  background-color: rgb(0, 0, 0, 0.7);
+  color: white;
+  font-size: 60px;
+  font-weight: bolder;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 30px black;
+  min-width: min-content;
+}
+.testimony_quote_container p {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.testimony_quote_container span {
+  color: var(--color-chocolate-1);
+  font-size: 70px;
+}
+.testimony_page_2 {
+  padding: 100px 5%;
+  background: linear-gradient(to top, #ffffff 95%, rgb(191, 191, 191) 100%);
+}
+.testimony_container {
+  display: flex;
+  overflow: scroll;
+  gap: 30px;
+  padding: 50px;
+  box-shadow: 1px 1px 30px rgb(161, 161, 161);
+  border-radius: 60px;
+  margin-bottom: 100px;
+}
+.testimony_container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.testimony_content_container {
+  padding: 50px;
+  box-shadow: 1px 1px 30px rgb(207, 205, 205);
+  border-radius: 50px;
+  text-align: center;
+}
+.testimony_content_container:hover {
+  box-shadow: 1px 1px 30px rgb(190, 190, 190);
+}
+.testimony_content_container img {
+  width: 200px;
+  border-radius: 50px;
+}
+.testimony_content_container p {
+  margin-top: 20px;
+}
+.testimony_title_container {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.star_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.star_fill_logo{
+  background-image: url("../ASSET/img/img-logo/star_fill.png");  
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;  
+}
+.star_empty_logo{
+  background-image: url("../ASSET/img/img-logo/star_empty.png");  
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;  
+}
+
+@media (max-width: 790px) {
+  .testimony_page_1 {
+    justify-content: center;
+    padding: 270px 5%;
+  }
+  .testimony_quote_container {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .testimony_quote_container span {
+    font-size: 50px;
+    font-weight: bold;
+  }
+}
+
+/* footer start */
+.footer_container {
+  background-color: var(--color-chocolate-4);
+  color: white;
+  padding: 60px 30px;
+  padding-top: 60px;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+.footer_container a {
+  color: white;
+}
+.footer_container a:hover {
+  color: var(--color-white-3);
+}
+.navbar_list_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact_list_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer_logo {
+  color: var(--color-chocolate-1);
+  font-size: 40px;
+  font-weight: bolder;
+}
+.footer_tagline {
+  font-size: 25px;
+  font-weight: 200;
+}
+.footer_location {
+  width: 300px;
+  line-height: 1.5;
+}
+.logo {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.email_footer_logo {
+  background-image: url("../ASSET/img/img-logo/email_active.png");
+}
+.phone_footer_logo {
+  background-image: url("../ASSET/img/img-logo/phone_active.png");
+}
+.facebook_footer_logo {
+  background-image: url("../ASSET/img/img-logo/facebook_active.png");
+}
+.twitter_footer_logo {
+  background-image: url("../ASSET/img/img-logo/twitter_active.png");
+}
+.instagram_footer_logo {
+  background-image: url("../ASSET/img/img-logo/instagram_active.png");
+}
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: medium;
+}
+.created_by a {
+  color: var(--color-chocolate-1);
+  font-weight: bolder;
+}
+
+@media (max-width: 990px) {
+  .footer_container {
+    gap: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .navbar_list_container {
+    flex-direction: row;
+  }
+  .contact_list_container {
+    align-items: center;
+  }
+  .footer_location {
+    text-align: center;
+  }
+}
+/* footer end */
